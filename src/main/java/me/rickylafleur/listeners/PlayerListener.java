@@ -27,6 +27,6 @@ public class PlayerListener implements Listener {
 
         Bukkit.getScheduler().runTaskLater(plugin, () -> plugin.getQuestionManager().getQuestions().stream()
                 .filter(questionData -> plugin.containsWords(message, questionData.getIdentifier().split("\\|")))
-                .forEach(questionData -> player.sendMessage(ChatColor.translateAlternateColorCodes('&', questionData.getResponse()))), 0);
+                .forEach(questionData -> player.sendMessage(ChatColor.translateAlternateColorCodes('&', questionData.getResponse()))), 10);
     }
 }
