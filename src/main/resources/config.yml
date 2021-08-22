@@ -1,2 +1,10 @@
 how|free|rank:
-  response: "&4&l<!> &4&l&nINFORMATION&4&l <!> &cYou can claim a free rank by doing /freerank"
+  response: "&aYou can claim a free rank by doing /freerank"
+how|claim|town:
+  response: "&aYou can claim land for your town by standing in the chunk you want to claim and doing /t claim"
+how|create|town:
+  response: "&aYou can create a town by doing /t create <name>"
+how|make|town:
+  response: "&aYou can create a town by doing /t create <name>"
+how|get|wild:
+  response: "&aYou can get to the wilderness by doing /wild"
