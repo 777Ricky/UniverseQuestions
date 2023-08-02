@@ -41,11 +41,4 @@ public class QuestionsPlugin extends JavaPlugin {
 
         pm.registerEvents(new PlayerListener(this), this);
     }
-
-    public boolean containsWords(String string, String[] words) {
-        List<String> wordsList = Arrays.asList(words);
-
-        return wordsList.stream()
-                .allMatch(word -> string.toLowerCase().contains(word));
-    }
 }

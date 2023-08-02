@@ -8,6 +8,9 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class PlayerListener implements Listener {
     private final QuestionsPlugin plugin;
 
@@ -25,8 +28,15 @@ public class PlayerListener implements Listener {
 
         String message = event.getMessage();
 
-        Bukkit.getScheduler().runTaskLater(plugin, () -> plugin.getQuestionManager().getQuestions().stream()
-                .filter(questionData -> plugin.containsWords(message, questionData.getIdentifier().split("\\|")))
+        plugin.getServer().getScheduler().runTaskLater(plugin, () -> plugin.getQuestionManager().getQuestions().stream()
+                .filter(questionData -> containsWords(message, questionData.getIdentifier().split("\\|")))
                 .forEach(questionData -> player.sendMessage(ChatColor.translateAlternateColorCodes('&', questionData.getResponse()))), 10);
+    }
+
+    private boolean containsWords(String string, String[] words) {
+        List<String> wordsList = Arrays.asList(words);
+
+        return wordsList.stream()
+                .allMatch(word -> string.toLowerCase().contains(word));
     }
 }
