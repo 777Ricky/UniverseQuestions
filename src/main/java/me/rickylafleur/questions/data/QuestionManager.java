@@ -19,7 +19,7 @@ public class QuestionManager {
     }
 
     public void load() {
-        ConfigurationSection config = plugin.getConfig();
+        final ConfigurationSection config = plugin.getConfig();
 
         questionDataMap.clear();
 

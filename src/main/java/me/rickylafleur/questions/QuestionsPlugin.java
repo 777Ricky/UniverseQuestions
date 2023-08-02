@@ -37,7 +37,7 @@ public class QuestionsPlugin extends JavaPlugin {
     }
 
     private void registerEvents() {
-        PluginManager pm = Bukkit.getServer().getPluginManager();
+        final PluginManager pm = Bukkit.getServer().getPluginManager();
 
         pm.registerEvents(new PlayerListener(this), this);
     }
