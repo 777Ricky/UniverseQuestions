@@ -1,6 +1,6 @@
-package me.rickylafleur.listeners;
+package me.rickylafleur.questions.listeners;
 
-import me.rickylafleur.UniverseQuestions;
+import me.rickylafleur.questions.QuestionsPlugin;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -9,9 +9,9 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
 public class PlayerListener implements Listener {
-    private final UniverseQuestions plugin;
+    private final QuestionsPlugin plugin;
 
-    public PlayerListener(UniverseQuestions plugin) {
+    public PlayerListener(QuestionsPlugin plugin) {
         this.plugin = plugin;
     }
 
@@ -19,7 +19,7 @@ public class PlayerListener implements Listener {
     public void onChat(AsyncPlayerChatEvent event) {
         Player player = event.getPlayer();
 
-        if (player.hasPermission("unifaq.bypass")) {
+        if (player.hasPermission("questions.bypass")) {
             return;
         }
 

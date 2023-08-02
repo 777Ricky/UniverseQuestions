@@ -1,5 +1,5 @@
-name: UniverseQuestions
-version: 1.0.0
+name: Questions
+version: 1.0
 author: Ricky Lafleur
-main: me.rickylafleur.UniverseQuestions
-api-version: 1.16
+main: me.rickylafleur.questions.QuestionsPlugin
+api-version: 1.19

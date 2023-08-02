@@ -1,7 +1,7 @@
-package me.rickylafleur;
+package me.rickylafleur.questions;
 
-import me.rickylafleur.data.QuestionManager;
-import me.rickylafleur.listeners.PlayerListener;
+import me.rickylafleur.questions.data.QuestionManager;
+import me.rickylafleur.questions.listeners.PlayerListener;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -9,8 +9,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.util.Arrays;
 import java.util.List;
 
-public class UniverseQuestions extends JavaPlugin {
-    private static UniverseQuestions plugin;
+public class QuestionsPlugin extends JavaPlugin {
+    private static QuestionsPlugin plugin;
 
     private final QuestionManager questionManager = new QuestionManager(this);
 
@@ -28,7 +28,7 @@ public class UniverseQuestions extends JavaPlugin {
         reloadConfig();
     }
 
-    public static UniverseQuestions getInstance() {
+    public static QuestionsPlugin getInstance() {
         return plugin;
     }
 

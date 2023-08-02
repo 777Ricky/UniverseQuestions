@@ -1,4 +1,4 @@
-package me.rickylafleur.types;
+package me.rickylafleur.questions.types;
 
 import org.bukkit.configuration.ConfigurationSection;
 

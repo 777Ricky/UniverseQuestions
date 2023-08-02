@@ -1,7 +1,7 @@
-package me.rickylafleur.data;
+package me.rickylafleur.questions.data;
 
-import me.rickylafleur.UniverseQuestions;
-import me.rickylafleur.types.QuestionData;
+import me.rickylafleur.questions.QuestionsPlugin;
+import me.rickylafleur.questions.types.QuestionData;
 import org.bukkit.configuration.ConfigurationSection;
 
 import java.util.Collection;
@@ -10,11 +10,11 @@ import java.util.Map;
 import java.util.logging.Level;
 
 public class QuestionManager {
-    private final UniverseQuestions plugin;
+    private final QuestionsPlugin plugin;
 
     private final Map<String, QuestionData> questionDataMap = new HashMap<>();
 
-    public QuestionManager(UniverseQuestions plugin) {
+    public QuestionManager(QuestionsPlugin plugin) {
         this.plugin = plugin;
     }
 
